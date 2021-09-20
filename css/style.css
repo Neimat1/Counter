@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.display-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.col{
+    color: #102a42;
+    flex-direction: column;
+}
+h1{
+    font-size: 64px;
+    font-family: 'Roboto', sans-serif;
+}
+#value{
+    font-size: 90px;
+    font-family: 'Open Sans', sans-serif;
+}
+.btns-container button{
+    border-radius: 12.5px;
+    margin:10px 2px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
