@@ -1,7 +1,19 @@
 var btns = document.querySelectorAll('.btn');
-var valueCounter =document.querySelector('#value')
+var valueCounter =document.querySelector('#value');
+
+
 var count=0;
-console.log(btns);
+if(localStorage.getItem('yourCounter')==null){
+    colorCounter();
+    valueCounter.textContent = count;
+    
+}
+else{
+    count =localStorage.getItem('yourCounter');
+    colorCounter()
+    valueCounter.textContent= count;
+}
+
 
 
 btns.forEach(function(btn){
@@ -15,19 +27,21 @@ btns.forEach(function(btn){
         else{
             count=0;
         }
-        if(count>0){
-            valueCounter.style.color='green';
-        }
-        if(count<0){
-            valueCounter.style.color = 'red'
-        }
-        if(count==0){
-            valueCounter.style.color = '#102a42';
-        }
+        colorCounter();
         valueCounter.textContent=count;
-
-
-
+        localStorage.setItem('yourCounter',count);
     })
 
 })
+
+function colorCounter(){
+    if(count>0){
+        valueCounter.style.color='green';
+    }
+    if(count<0){
+        valueCounter.style.color = 'red'
+    }
+    if(count==0){
+        valueCounter.style.color = '#102a42';
+    }
+}
