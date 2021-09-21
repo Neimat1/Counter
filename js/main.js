@@ -6,7 +6,6 @@ var count=0;
 if(localStorage.getItem('yourCounter')==null){
     colorCounter();
     valueCounter.textContent = count;
-    localStorage.setItem('yourCounter',count);
     
 }
 else{
